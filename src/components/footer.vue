@@ -1,9 +1,9 @@
 <template>
-	<div class="w-full container flex justify-between bg-mdarkblue">
+	<div class="w-full p-8 flex justify-between bg-mdarkblue h-40">
 		<div class="text-white text-5xl ">
 			Shortly
 		</div>
-		<div class="flex text-sm">
+		<div class="flex text-sm text-white">
 			<div v-for="link in links" :key="link.title" class="p-2">
 				<header class=" font-bold">{{ link.title }}</header>
 				<div>

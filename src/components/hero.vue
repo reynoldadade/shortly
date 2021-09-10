@@ -1,5 +1,5 @@
 <template>
-	<div class="w-full grid grid-cols-2 container">
+	<div class="w-full grid grid-cols-2 p-8">
 		<div class="flex flex-col  justify-center">
 			<div class="text-5xl p-2">More than just links</div>
 			<div class="w-1/2 p-2">

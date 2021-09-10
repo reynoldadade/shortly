@@ -1,5 +1,5 @@
 <template>
-	<div class="w-full container">
+	<div class="w-full p-8">
 		<div>
 			Advanced Statistics
 		</div>
@@ -31,14 +31,17 @@ export default {
 				{
 					title: "Brand Recognition",
 					message: "Boost your brand recognition with each click",
+					icon: "@/assets/images/icon-brand-recognition.svg",
 				},
 				{
 					title: "Detailed Records",
 					message: "Boost your brand recognition with each click",
+					icon: "@/assets/images/icon-brand-detailed-records.svg",
 				},
 				{
 					title: "Fully Customisable",
 					message: "Boost your brand recognition with each click",
+					icon: "@/assets/images/icon-brand-fully-customizable.svg",
 				},
 			],
 		};
