@@ -17,6 +17,12 @@
 						class="bg-mcyan text-white px-6 py-2 mx-4 rounded-lg"
 					>
 						Shorten it!
+						<span
+							><i
+								class="fas fa-spin fa-circle-notch"
+								v-if="loading"
+							></i
+						></span>
 					</button>
 				</div>
 			</form>
@@ -42,6 +48,7 @@ export default {
 		return {
 			url: "",
 			links: [],
+			loading: false,
 		};
 	},
 	name: "shortener",
@@ -58,15 +65,17 @@ export default {
 				);
 				return response.data;
 			} catch ({ response }) {
-				console.error(response);
+				return response.data;
 			}
 		},
 		async shortenURL(url) {
+			this.loading = true;
 			const response = await this.GET_shorten(url);
 			if (response) {
 				console.log(response);
 				this.links = [...this.links, response.result];
 			}
+			this.loading = false;
 		},
 	},
 };
