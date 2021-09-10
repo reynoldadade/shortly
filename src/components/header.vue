@@ -7,7 +7,7 @@
 					href="http://"
 					v-for="link in links"
 					:key="link"
-					class="p-2"
+					class="p-2 hover:text-gray-700"
 					>{{ link }}</a
 				>
 			</div>
@@ -34,11 +34,13 @@
 			>
 				<div class="bg-mviolet m-4 rounded-lg p-4">
 					<div
-						class="p-4 text-mgrayV w-full"
+						class="p-4 text-mgrayV w-full "
 						v-for="link in links"
 						:key="link"
 					>
-						<a href="http://" class="p-2">{{ link }}</a>
+						<a href="http://" class="p-2 hover:text-gray-700">{{
+							link
+						}}</a>
 					</div>
 					<hr class="m-4 text-mgrayV" />
 					<div class="m-4">

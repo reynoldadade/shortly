@@ -5,16 +5,14 @@
 		</div>
 		<div class="flex flex-col  justify-center">
 			<div
-				class=" p-2 md:w-2/3 w-full  md:text-left text-center font-bold text-5xl"
+				class=" p-2  w-full  md:text-left text-center font-bold text-5xl"
 			>
 				<p>
 					More than just
 				</p>
 				<p>shorter links</p>
 			</div>
-			<div
-				class="md:w-1/2 w-full p-2 md:text-left text-center text-mgrayV"
-			>
+			<div class=" w-full p-2 md:text-left text-center text-mgrayV">
 				<p>
 					Build your brands recognition and get detailed insights
 				</p>
