@@ -1,6 +1,25 @@
-import { shallowMount } from "@vue/test-utils";
-import Shorter from "@/components/shortener.vue";
+import { shallowMount, localVue } from "@vue/test-utils";
+import shortener from "@/components/shortener.vue";
+import { escapeHTML } from "core-js/core/string";
 
-describe("HelloWorld.vue", () => {
-	it("it returns an object", () => {});
+const localVue = createLocalVue();
+localVue.use();
+describe("shortener.vue", () => {
+	beforeEach(() => {
+		wrapper = shallowMount(shortener, {
+			localVue,
+			mocks: {
+				axios: {
+					get: jest.fn().mockImplementation(() => {
+						return Promise.resolve({
+							data: {
+								ok: true,
+								url: "test.com",
+							},
+						});
+					}),
+				},
+			},
+		});
+	});
 });
