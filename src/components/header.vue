@@ -14,7 +14,9 @@
 		</div>
 		<div>
 			<button class="rounded-full p-2  ">Login</button>
-			<button class="rounded-full py-1 px-4 text-white bg-mcyan">
+			<button
+				class="rounded-full py-1 px-4 text-white bg-mcyan hover:opacity-75"
+			>
 				Sign up
 			</button>
 		</div>
@@ -25,7 +27,7 @@
 export default {
 	data() {
 		return {
-			links: ["Features", "pricing", "Resources"],
+			links: ["Features", "Pricing", "Resources"],
 		};
 	},
 };

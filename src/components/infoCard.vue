@@ -1,9 +1,9 @@
 <template>
-	<div class=" shadow p-4 bg-white relative">
+	<div class=" shadow p-4 bg-white relative z-10 rounded-lg">
 		<div
-			class="absolute rounded-full border bg-mdarkblue -top-5 left-5 w-10 h-10 p-1"
+			class="absolute rounded-full border bg-mdarkblue -top-5 left-5 w-10 h-10 p-1 flex justify-center items-center text-mcyan"
 		>
-			<img src="@/assets/images/icon-fully-customizable.svg" alt="logo" />
+			<i :class="info.icon" alt="logo"></i>
 		</div>
 		<div>
 			{{ info.title }}

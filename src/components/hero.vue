@@ -1,21 +1,25 @@
 <template>
-	<div class="w-full grid grid-cols-2 p-8">
+	<div class="w-full flex flex-col  flex-1 md:flex-row-reverse p-8 g">
+		<div class="p-4">
+			<img src="@/assets/images/illustration-working.svg" alt="" />
+		</div>
 		<div class="flex flex-col  justify-center">
-			<div class="text-5xl p-2">More than just links</div>
-			<div class="w-1/2 p-2">
+			<div class="text-5xl p-2 w-full  md:text-left text-center">
+				More than just links
+			</div>
+			<div class="md:w-3/4 w-full p-2 md:text-left text-center">
 				Build your brands recognition and get detailed insights on how
 				your links are performing
 			</div>
-			<div class="px-2 py-4">
+			<div
+				class="px-2 py-4 w-full text-center flex md:justify-start justify-center"
+			>
 				<button
 					class="rounded-full py-1 px-4 font-semibold text-white bg-mcyan"
 				>
 					Get Started
 				</button>
 			</div>
-		</div>
-		<div class="p-4">
-			<img src="@/assets/images/illustration-working.svg" alt="" />
 		</div>
 	</div>
 </template>

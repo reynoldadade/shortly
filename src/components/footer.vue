@@ -1,5 +1,5 @@
 <template>
-	<div class="w-full p-8 flex justify-between bg-mdarkblue h-40">
+	<div class="w-full px-8 py-20 flex justify-between bg-mdarkblue ">
 		<div class="text-white text-5xl ">
 			Shortly
 		</div>
