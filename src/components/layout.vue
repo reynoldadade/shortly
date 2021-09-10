@@ -5,9 +5,7 @@
 			Hero
 		</div>
 		<Shortener />
-		<section>
-			information
-		</section>
+		<information />
 		<section>boost your links</section>
 		<section>footer</section>
 	</div>
@@ -16,10 +14,12 @@
 <script>
 import Header from "./header.vue";
 import Shortener from "./shorterner.vue";
+import information from "./information.vue";
 export default {
 	components: {
 		Header,
 		Shortener,
+		information,
 	},
 };
 </script>
