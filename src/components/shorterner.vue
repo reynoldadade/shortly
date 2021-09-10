@@ -1,6 +1,9 @@
 <template>
 	<div class="flex flex-col justify-center items-center w-full m-2">
-		<div class="md:w-4/6 rounded-lg bg-mviolet px-8 py-14 w-full">
+		<div
+			class="md:w-4/6 rounded-lg bg-mviolet px-8 py-14 w-full"
+			id="shortener"
+		>
 			<form @submit.prevent="shortenURL(url)">
 				<div class="flex flex-col md:flex-row ">
 					<input
@@ -92,4 +95,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+#shortener {
+	background-image: url("../assets/images/bg-boost-desktop.svg");
+}
+</style>

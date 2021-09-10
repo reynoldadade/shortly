@@ -1,8 +1,7 @@
 <template>
 	<div
-		class="w-full border-2 flex flex-col items-center justify-center h-64"
+		class="w-full  flex flex-col items-center justify-center h-64 z-20"
 		id="boost"
-		style="background-image: url(@/assets/images/bg-boost-desktop.svg)"
 	>
 		<div class="font-bold text-white">
 			Boost your links today
@@ -14,7 +13,6 @@
 				Get Started
 			</button>
 		</div>
-		<!-- <img src="@/assets/images/bg-boost-desktop.svg" alt="" /> -->
 	</div>
 </template>
 
@@ -24,5 +22,6 @@ export default {};
 
 <style scoped>
 #boost {
+	background-image: url("../assets/images/bg-boost-desktop.svg");
 }
 </style>

@@ -17,7 +17,7 @@
 			<div
 				v-for="(info, index) in information"
 				:key="index"
-				class="md:px-8 my-4"
+				class="md:px-8 my-4 flex-1"
 				:class="{
 					'md:pt-4': index === 0,
 					'md:pt-8': index === 1,
