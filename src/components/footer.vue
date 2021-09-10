@@ -1,11 +1,11 @@
 <template>
-	<div id="p-4 flex w-full border-2 border-red-500">
-		<div>
-			<img src="@/assets/images/logo.svg" alt="shortly" />
+	<div class="w-full container flex justify-between bg-mdarkblue">
+		<div class="text-white text-5xl ">
+			Shortly
 		</div>
-		<div class="flex">
-			<div v-for="link in links" :key="link.title">
-				<header>{{ link.title }}</header>
+		<div class="flex text-sm">
+			<div v-for="link in links" :key="link.title" class="p-2">
+				<header class=" font-bold">{{ link.title }}</header>
 				<div>
 					<div v-for="url in link.links" :key="url">
 						<a href="#">{{ url }}</a>
@@ -13,8 +13,11 @@
 				</div>
 			</div>
 		</div>
-		<div>
-			logos
+		<div class="grid gap-4 grid-cols-4">
+			<img src="@/assets/images/icon-facebook.svg" alt="" />
+			<img src="@/assets/images/icon-instagram.svg" alt="" />
+			<img src="@/assets/images/icon-pinterest.svg" alt="" />
+			<img src="@/assets/images/icon-twitter.svg" alt="" />
 		</div>
 	</div>
 </template>

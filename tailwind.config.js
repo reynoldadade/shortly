@@ -6,6 +6,7 @@ module.exports = {
 			colors: {
 				mcyan: "hsl(180, 66%, 49%)",
 				mviolet: "hsl(257, 27%, 26%)",
+				mdarkblue: "hsl(255, 11%, 22%)",
 			},
 		},
 	},

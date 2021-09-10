@@ -1,6 +1,6 @@
 <template>
-	<div class="w-full p-2 flex justify-between">
-		<div class="flex w-1/2 justify-between">
+	<div class="w-full p-2 flex justify-between container">
+		<div class="flex w-1/2 justify-between px-8">
 			<img src="@/assets/images/logo.svg" alt="Shortly" />
 			<div>
 				<a
