@@ -35,6 +35,8 @@
 				v-for="(link, index) in links"
 				:key="index"
 				:link="link"
+				:selectedLink="selectedLink"
+				:copyText="copyText"
 			/>
 		</div>
 	</div>
@@ -59,44 +61,10 @@ export default {
 		shortenURL: Function,
 		loading: Boolean,
 		links: Array,
+		selectedLink: String,
+		copyText: Function,
 	},
 	name: "shortener",
-	methods: {
-		// async GET_shorten(url) {
-		// 	try {
-		// 		const response = await axios.get(
-		// 			"https://api.shrtco.de/v2/shorten",
-		// 			{
-		// 				params: {
-		// 					url,
-		// 				},
-		// 			}
-		// 		);
-		// 		return response.data;
-		// 	} catch ({ response }) {
-		// 		return response.data;
-		// 	}
-		// },
-		// async shortenURL(url) {
-		// 	this.loading = true;
-		// 	const response = await this.GET_shorten(url);
-		// 	if (response.ok) {
-		// 		this.links = [...this.links, response.result];
-		// 		Swal.fire({
-		// 			title: "Success!",
-		// 			text: `Link Generated`,
-		// 			icon: "success",
-		// 		});
-		// 	} else {
-		// 		Swal.fire({
-		// 			title: "Error!",
-		// 			text: `${response.error}`,
-		// 			icon: "error",
-		// 		});
-		// 	}
-		// 	this.loading = false;
-		// },
-	},
 };
 </script>
 

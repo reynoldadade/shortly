@@ -7,14 +7,15 @@
 		>
 			{{ link.original_link }}
 		</div>
-		<div class="text-mcyan p-1 flex-1">
+		<div class="text-mcyan p-1 flex-1" :id="link.full_short_link">
 			{{ link.full_short_link }}
 		</div>
 		<div class="">
 			<button
+				@click.prevent="copyText(link.full_short_link)"
 				class="bg-mcyan text-white  md:py-2 md:px-4 rounded-lg p-2 w-full"
 			>
-				copy
+				{{ link.full_short_link === selectedLink ? "copied" : "copy" }}
 			</button>
 		</div>
 	</div>
@@ -24,6 +25,8 @@
 export default {
 	props: {
 		link: Object,
+		selectedLink: String,
+		copyText: Function,
 	},
 };
 </script>
