@@ -41,9 +41,9 @@
 </template>
 
 <script>
-import axios from "axios";
+// import axios from "axios";
 import shortenedLinks from "./shortenedLinks.vue";
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 export default {
 	components: {
 		shortenedLinks,
@@ -51,46 +51,51 @@ export default {
 	data() {
 		return {
 			url: "",
-			links: [],
-			loading: false,
+			// links: [],
+			// loading: false,
 		};
+	},
+	props: {
+		shortenURL: Function,
+		loading: Boolean,
+		links: Array,
 	},
 	name: "shortener",
 	methods: {
-		async GET_shorten(url) {
-			try {
-				const response = await axios.get(
-					"https://api.shrtco.de/v2/shorten",
-					{
-						params: {
-							url,
-						},
-					}
-				);
-				return response.data;
-			} catch ({ response }) {
-				return response.data;
-			}
-		},
-		async shortenURL(url) {
-			this.loading = true;
-			const response = await this.GET_shorten(url);
-			if (response.ok) {
-				this.links = [...this.links, response.result];
-				Swal.fire({
-					title: "Success!",
-					text: `Link Generated`,
-					icon: "success",
-				});
-			} else {
-				Swal.fire({
-					title: "Error!",
-					text: `${response.error}`,
-					icon: "error",
-				});
-			}
-			this.loading = false;
-		},
+		// async GET_shorten(url) {
+		// 	try {
+		// 		const response = await axios.get(
+		// 			"https://api.shrtco.de/v2/shorten",
+		// 			{
+		// 				params: {
+		// 					url,
+		// 				},
+		// 			}
+		// 		);
+		// 		return response.data;
+		// 	} catch ({ response }) {
+		// 		return response.data;
+		// 	}
+		// },
+		// async shortenURL(url) {
+		// 	this.loading = true;
+		// 	const response = await this.GET_shorten(url);
+		// 	if (response.ok) {
+		// 		this.links = [...this.links, response.result];
+		// 		Swal.fire({
+		// 			title: "Success!",
+		// 			text: `Link Generated`,
+		// 			icon: "success",
+		// 		});
+		// 	} else {
+		// 		Swal.fire({
+		// 			title: "Error!",
+		// 			text: `${response.error}`,
+		// 			icon: "error",
+		// 		});
+		// 	}
+		// 	this.loading = false;
+		// },
 	},
 };
 </script>
