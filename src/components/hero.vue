@@ -5,12 +5,15 @@
 		</div>
 		<div class="flex flex-col  justify-center">
 			<div
-				class=" p-2 w-2/3 md:w-full  md:text-left text-center font-bold text-7xl"
+				class=" p-2 md:w-2/3 w-full  md:text-left text-center font-bold text-5xl"
 			>
-				More than just shorter links
+				<p>
+					More than just
+				</p>
+				<p>shorter links</p>
 			</div>
 			<div
-				class="w-1/2 md:w-full p-2 md:text-left text-center text-mgrayV"
+				class="md:w-1/2 w-full p-2 md:text-left text-center text-mgrayV"
 			>
 				<p>
 					Build your brands recognition and get detailed insights
@@ -21,7 +24,7 @@
 				class="px-2 py-4 w-full text-center flex md:justify-start justify-center"
 			>
 				<button
-					class="rounded-full py-1 px-4 font-semibold text-white bg-mcyan"
+					class="rounded-full py-1 px-4 font-semibold text-white bg-mcyan "
 				>
 					Get Started
 				</button>
