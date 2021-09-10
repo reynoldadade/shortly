@@ -1,20 +1,20 @@
 <template>
 	<div class="flex flex-col justify-center items-center w-full">
-		<div class="w-4/6 rounded-lg bg-mviolet px-8 py-14">
+		<div class="md:w-4/6 rounded-lg bg-mviolet px-8 py-14 w-full">
 			<form @submit.prevent="shortenURL(url)">
-				<div class="flex">
+				<div class="flex flex-col md:flex-row ">
 					<input
 						type="url"
 						name="url"
 						id="url"
 						placeholder="Shorten a link here.."
-						class=" p-2 flex-grow rounded-lg"
+						class=" p-2 md:flex-grow rounded-lg flex-1"
 						required
 						v-model="url"
 					/>
 					<button
 						type="submit"
-						class="bg-mcyan text-white px-6 py-2 mx-4 rounded-lg hover:opacity-75"
+						class="bg-mcyan text-white px-6 py-2 md:mx-4 my-4 md:my-0 rounded-lg hover:opacity-75"
 					>
 						Shorten it!
 						<span
