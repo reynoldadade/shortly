@@ -8,7 +8,7 @@
 		<div class="text-center md:text-left px-8 py-2">
 			{{ info.title }}
 		</div>
-		<div class="text-sm px-8 py-4">
+		<div class="text-sm px-8 py-4 text-mgrayV">
 			{{ info.message }}
 		</div>
 	</div>
