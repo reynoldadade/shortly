@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-col justify-center items-center w-full">
+	<div class="flex flex-col justify-center items-center w-full m-2">
 		<div class="md:w-4/6 rounded-lg bg-mviolet px-8 py-14 w-full">
 			<form @submit.prevent="shortenURL(url)">
 				<div class="flex flex-col md:flex-row ">
@@ -27,7 +27,7 @@
 				</div>
 			</form>
 		</div>
-		<div class="w-4/6 my-2">
+		<div class="w-full md:w-4/6  m-1 md:my-2">
 			<shortened-links
 				v-for="(link, index) in links"
 				:key="index"
