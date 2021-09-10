@@ -19,12 +19,34 @@
 				</div>
 			</form>
 		</div>
-	</div></template
->
+	</div>
+</template>
 
 <script>
+import axios from "axios";
 export default {
 	name: "shortener",
+	methods: {
+		async GET_shorten(url) {
+			try {
+				const response = await axios.$get(
+					"https://api.shrtco.de/v2/shorten",
+					{
+						params: {
+							url,
+						},
+					}
+				);
+				return response.data;
+			} catch ({ response }) {}
+		},
+		shortenURL(url) {
+            const response = await this.GET_shorten(url);
+            if(response){
+                console.log(response)
+            }
+        },
+	},
 };
 </script>
 
