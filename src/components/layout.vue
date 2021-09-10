@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div>Header</div>
+		<Header />
 		<div>
 			Hero
 		</div>
@@ -16,7 +16,12 @@
 </template>
 
 <script>
-export default {};
+import Header from "./header.vue";
+export default {
+	components: {
+		Header,
+	},
+};
 </script>
 
 <style></style>
