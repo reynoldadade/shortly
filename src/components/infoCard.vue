@@ -1,5 +1,5 @@
 <template>
-	<div class="relative shadow p-2">
+	<div class=" shadow p-2">
 		<div>
 			{{ info.title }}
 		</div>

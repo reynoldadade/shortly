@@ -1,25 +1,29 @@
 <template>
-	<div>
+	<div class="w-full h-full">
 		<Header />
-		<div>
-			Hero
-		</div>
+		<Hero />
 		<Shortener />
 		<information />
-		<section>boost your links</section>
-		<section>footer</section>
+		<boost />
+		<Footer />
 	</div>
 </template>
 
 <script>
 import Header from "./header.vue";
+import Hero from "./hero.vue";
 import Shortener from "./shorterner.vue";
 import information from "./information.vue";
+import boost from "./boost.vue";
+import Footer from "./footer.vue";
 export default {
 	components: {
 		Header,
 		Shortener,
 		information,
+		boost,
+		Footer,
+		Hero,
 	},
 };
 </script>

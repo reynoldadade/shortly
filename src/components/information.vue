@@ -1,5 +1,5 @@
 <template>
-	<div class="w-full h-80 border-2 border-red-500">
+	<div class="w-full  border-2 border-red-500">
 		<div>
 			Advanced Statistics
 		</div>
@@ -12,11 +12,6 @@
 				v-for="(info, index) in information"
 				:key="index"
 				class="p-8  transform"
-				v-bind:class="{
-					'translate-y-4': index === 0,
-					'translate-y-8': index === 1,
-					'translate-y-12': index === 2,
-				}"
 			>
 				<info-card :info="info" />
 			</div>

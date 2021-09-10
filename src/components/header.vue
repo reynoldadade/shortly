@@ -1,11 +1,15 @@
 <template>
 	<div class="w-full p-2 flex justify-between">
 		<div class="flex w-1/2 justify-between">
-			<img src="/src/assets/images/logo.svg" alt="Shortly" />
+			<img src="@/assets/images/logo.svg" alt="Shortly" />
 			<div>
-				<a href="http://" v-for="link in links" :key="link">{{
-					link
-				}}</a>
+				<a
+					href="http://"
+					v-for="link in links"
+					:key="link"
+					class="p-2"
+					>{{ link }}</a
+				>
 			</div>
 		</div>
 		<div>
