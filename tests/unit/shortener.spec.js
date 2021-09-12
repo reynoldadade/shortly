@@ -1,25 +1,26 @@
-import { shallowMount, localVue } from "@vue/test-utils";
-import shortener from "@/components/shortener.vue";
-import { escapeHTML } from "core-js/core/string";
+import { shallowMount } from "@vue/test-utils";
+import layout from "@/components/layout.vue";
+import axios from "axios";
 
-const localVue = createLocalVue();
-localVue.use();
+jest.mock("axios");
+axios.get.mockResolvedValue({
+	data: {
+		ok: true,
+		result: {
+			shorten_link: "http://short.link",
+		},
+	},
+});
+
 describe("shortener.vue", () => {
+	let wrapper;
 	beforeEach(() => {
-		wrapper = shallowMount(shortener, {
-			localVue,
-			mocks: {
-				axios: {
-					get: jest.fn().mockImplementation(() => {
-						return Promise.resolve({
-							data: {
-								ok: true,
-								url: "test.com",
-							},
-						});
-					}),
-				},
-			},
-		});
+		wrapper = shallowMount(layout);
+	});
+
+	it("should return a response", async () => {
+		const response = await wrapper.vm.GET_shorten("https://wainsight.com");
+		expect(response.ok).toBeTruthy();
+		expect(response.result.shorten_link).toBe("http://short.link");
 	});
 });

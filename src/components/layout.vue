@@ -46,6 +46,7 @@ export default {
 	},
 	name: "main-page",
 	mounted() {
+		//get saved links on page refresh
 		this.links = JSON.parse(localStorage.getItem("links"));
 	},
 	methods: {
