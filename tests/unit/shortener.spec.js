@@ -23,4 +23,13 @@ describe("shortener.vue", () => {
 		expect(response.ok).toBeTruthy();
 		expect(response.result.shorten_link).toBe("http://short.link");
 	});
+
+	it("should save response into links", async () => {
+		await wrapper.vm.shortenURL("https://wainsight.com");
+		expect(wrapper.vm.links).toEqual([
+			{
+				shorten_link: "http://short.link",
+			},
+		]);
+	});
 });
